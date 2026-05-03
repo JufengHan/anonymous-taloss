@@ -133,7 +133,7 @@ Use TALoss by setting:
 The main TALoss hyperparameters are:
 
 ```bash
---taloss_lambda 0.3
+--taloss_lambda 0.5
 --taloss_eps 1e-8
 ```
 
