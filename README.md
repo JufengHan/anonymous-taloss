@@ -36,7 +36,39 @@ Exchange
 Electricity
 ```
 
-A typical dataset structure is:
+### 2.1 Download Datasets
+
+The benchmark datasets can be downloaded from the following public source:
+
+```text
+https://huggingface.co/datasets/pkr7098/time-series-forecasting-datasets
+```
+
+You can download the required datasets using the following commands:
+
+```bash
+mkdir -p ./dataset/ETT-small
+mkdir -p ./dataset/weather
+mkdir -p ./dataset/exchange_rate
+mkdir -p ./dataset/electricity
+
+URL_PREFIX="https://huggingface.co/datasets/pkr7098/time-series-forecasting-datasets/resolve/main"
+
+wget ${URL_PREFIX}/ETTh1.csv -O ./dataset/ETT-small/ETTh1.csv
+wget ${URL_PREFIX}/ETTh2.csv -O ./dataset/ETT-small/ETTh2.csv
+wget ${URL_PREFIX}/ETTm1.csv -O ./dataset/ETT-small/ETTm1.csv
+wget ${URL_PREFIX}/ETTm2.csv -O ./dataset/ETT-small/ETTm2.csv
+
+wget ${URL_PREFIX}/weather.csv -O ./dataset/weather/weather.csv
+wget ${URL_PREFIX}/exchange_rate.csv -O ./dataset/exchange_rate/exchange_rate.csv
+wget ${URL_PREFIX}/electricity.csv -O ./dataset/electricity/electricity.csv
+```
+
+If `wget` is not available, please manually download the corresponding `.csv` files from the dataset page and place them in the folders shown below.
+
+### 2.2 Dataset Folder Structure
+
+After downloading, the dataset folder should be organized as follows:
 
 ```text
 ./dataset/
@@ -63,21 +95,20 @@ A typical project structure is:
 ├── models/
 ├── data_provider/
 ├── utils/
-├── ./dataset/
-├── ETT-small/
-│   ├── ETTh1.csv
-│   ├── ETTh2.csv
-│   ├── ETTm1.csv
-│   └── ETTm2.csv
-    ├── weather/
-        └── weather.csv
-    ├── exchange_rate/
-        └── exchange_rate.csv
-    └── electricity/
-        └── electricity.csv
+├── dataset/
+│   ├── ETT-small/
+│   │   ├── ETTh1.csv
+│   │   ├── ETTh2.csv
+│   │   ├── ETTm1.csv
+│   │   └── ETTm2.csv
+│   ├── weather/
+│   │   └── weather.csv
+│   ├── exchange_rate/
+│   │   └── exchange_rate.csv
+│   └── electricity/
+│       └── electricity.csv
 └── README.md
 ```
-
 ## 3. Supported Loss Functions
 
 The code supports the following training losses:
