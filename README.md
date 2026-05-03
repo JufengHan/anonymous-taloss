@@ -9,7 +9,7 @@ TALoss is a training objective designed for time-series forecasting. In addition
 Create a Python environment and install the required dependencies.
 
 ```bash
-conda create -n taloss python=3.10
+conda create -n taloss python=3.11
 conda activate taloss
 pip install -r requirements.txt
 ```
