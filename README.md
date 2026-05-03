@@ -134,8 +134,7 @@ python -u run.py \
   --des Exp \
   --itr 1 \
   --loss TALoss \
-  --taloss_lambda 0.3 \
-  --taloss_eps 1e-8
+  --taloss_lambda 0.5
 ```
 
 ## 5. Example: Training with MSE
@@ -198,8 +197,7 @@ python -u run.py \
   --des Exp \
   --itr 1 \
   --loss TALoss \
-  --taloss_lambda 0.3 \
-  --taloss_eps 1e-8
+  --taloss_lambda 0.5
 ```
 
 ## 7. Evaluation Metrics
@@ -273,7 +271,6 @@ python -u run.py \
   --des Exp \
   --itr 1 \
   --loss TALoss \
-  --taloss_lambda 0.3 \
-  --taloss_eps 1e-8
+  --taloss_lambda 0.5
 done
 ```
